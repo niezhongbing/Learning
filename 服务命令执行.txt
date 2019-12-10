@@ -1,0 +1,96 @@
+--箱气源
+阿里云公网ip:47.102.42.131
+账号:root
+密码:User@123!!!qwer
+
+项目地址：https://gitee.com/Flerken/destiny.git
+
+云服务器密码
+193.112.121.126
+User!@#0610~~~Zxc....
+密钥
+nzb_611_zxc
+
+域名cdn
+dns7.hichina.com
+dns8.hichina.com
+
+创建一个文件
+touch
+查看防火墙状态
+firewall-cmd --state 
+停止
+systemctl stop firewalld.service
+
+检索日志
+grep -A [上下行数] -n '关键字' 文件名
+cat 文件名|grep -n -B向上行数 -A向下行数 '关键字'
+
+启动
+MQ (llzjmysql.huazai.ltd)
+cd /software/rabbitmq_server-3.6.1/sbin
+./rabbitmq-server -detached
+
+docker
+启动
+systemctl start docker.service
+版本查看
+docker version
+
+
+redis
+cd /usr/local/redis/bin
+./redis-server /usr/local/redis/etc/redis.conf
+
+
+!@#20191011zxc
+mysql  (llzjmysql.huazai.ltd)
+cd /usr/local/mysql
+./support-files/mysql.server start
+service mysqld restart 重启myql
+service mysqld status 查看状态
+密码： !@#20191011zxc
+
+关闭
+ps -ef|grep redis
+ps -ef|grep rabbitmq
+ps -ef|grep mysql 
+kill -9 [进程]
+
+
+nginx 
+安装目录在
+/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+
+刷新配置
+cd /usr/local/nginx/sbin
+./nginx -s reload
+
+/usr/local/nginx/sbin/nginx -s reload
+
+查看系统内存使用情况
+ free -m
+查看系统磁盘空间
+  df -hl
+  
+释放空闲内存，清除缓存
+  //参考于文章 https://jingyan.baidu.com/article/1974b2898655baf4b1f774d7.html
+  1，total 内存总数 used 已经使用的内存数 free 空闲的内存
+  Free –m
+  
+  2，获得管理员权限
+  sudo -i 
+  
+  3，先进行拷贝文件拷贝，增加内存使用量（即used的占用量）
+  输入命令: cp -r /etc ~/test/
+
+  4，输入命令：sync
+  回车后继续输入命令：echo 3 > /proc/sys/vm/drop_caches
+  回车后继续输入命令：cat /proc/sys/vm/drop_caches
+  回车后返回结果3
+  是将/proc/sys/vm/drop_caches值设为3
+  
+ 5，缓存释放已经完成了，再次执行命令Free –m看看，通过图中可以对比看到，内存被释放了。
+ 
+ revoke SELECT, INSERT, UPDATE, DELETE, CREATE, INDEX ON *.* TO 'cx_oauth'@'%';
+ 
